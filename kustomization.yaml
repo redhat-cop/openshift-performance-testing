@@ -7,3 +7,5 @@ resources:
   - vtn-2-default-pod-network
   - vtn-3-udn-blue
   - vtn-4-udn-blue
+  - vtn-5-udn-green
+  - vtn-6-udn-green
