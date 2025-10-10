@@ -1,0 +1,42 @@
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: network-tools
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: network-tools
+  template:
+    metadata:
+      labels:
+        app: network-tools
+        deployment: network-tools
+    spec:
+      containers:
+        - name: network-tools
+          image: 'quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:22db92ca6dc423f90248a6f6964ff217b833534e68e0ee1d35052a01073f3ff2'
+          imagePullPolicy: IfNotPresent
+          stdin: true
+          stdinOnce: true
+          command:
+            - /bin/sh
+          securityContext:
+            capabilities:
+              drop:
+                - ALL
+            runAsNonRoot: true
+            allowPrivilegeEscalation: false
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      dnsPolicy: ClusterFirst
+      securityContext: {}
+      schedulerName: default-scheduler
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 25%
+      maxSurge: 25%
+  revisionHistoryLimit: 10
+  progressDeadlineSeconds: 600

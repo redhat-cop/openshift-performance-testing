@@ -1,0 +1,9 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - vtn-1-default-pod-network
+  - vtn-2-default-pod-network
+  - vtn-3-udn-blue
+  - vtn-4-udn-blue
