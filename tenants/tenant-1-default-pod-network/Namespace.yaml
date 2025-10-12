@@ -2,4 +2,4 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: vtn-2-default-pod-network
+  name: tenant-1-default-pod-network
