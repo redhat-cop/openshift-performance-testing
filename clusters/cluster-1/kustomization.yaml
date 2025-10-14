@@ -3,9 +3,23 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
+  - ../../capabilities/nmstate-operator
+  - ../../capabilities/nmstate
+  - ../../capabilities/acm-operator
+  - ../../capabilities/acm-hub
+
+  - ../../capabilities/cudn-tenant-7-private
+  - ../../capabilities/cudn-tenant-7-public
+  - ../../capabilities/cudn-tenant-8-private
+  - ../../capabilities/cudn-tenant-8-public
+
   - ../../tenants/tenant-1-default-pod-network
   - ../../tenants/tenant-2-default-pod-network
   - ../../tenants/tenant-3-udn-blue
   - ../../tenants/tenant-4-udn-blue
   - ../../tenants/tenant-5-udn-green
   - ../../tenants/tenant-6-udn-green
+  - ../../tenants/tenant-7-frontend
+  - ../../tenants/tenant-7-backend
+  - ../../tenants/tenant-8-frontend
+  - ../../tenants/tenant-8-backend

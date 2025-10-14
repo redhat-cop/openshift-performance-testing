@@ -1,0 +1,15 @@
+---
+apiVersion: k8s.ovn.org/v1
+kind: ClusterUserDefinedNetwork
+metadata:
+  name: tenant-8-private
+spec:
+  namespaceSelector:
+    matchLabels:
+      'tenant': 'tenant-8'
+  network:
+    topology: Layer2
+    layer2:
+      role: Secondary
+      subnets:
+        - 10.8.0.0/24

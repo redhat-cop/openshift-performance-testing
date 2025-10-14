@@ -1,0 +1,15 @@
+---
+operatorGroups:
+  - name: openshift-nmstate
+    createNamespace: true
+    targetOwnNamespace: true
+
+operators:
+  - channel: stable
+    installPlanApproval: Manual
+    automaticIntermediateManualUpgrades: true
+    name: kubernetes-nmstate-operator
+    source: redhat-operators
+    sourceNamespace: openshift-marketplace
+    csv: kubernetes-nmstate-operator.4.19.0-202509300254
+    namespace: openshift-nmstate

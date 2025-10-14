@@ -1,0 +1,13 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: tenant-7-backend
+
+resources:
+  - Namespace.yaml
+  - ../../capabilities/udn-tenant-7
+  - ../../capabilities/network-tools
+
+patches:
+  - path: Deployment_network-tools.yaml
