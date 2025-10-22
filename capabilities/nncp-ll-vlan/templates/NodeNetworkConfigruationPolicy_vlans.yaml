@@ -1,0 +1,21 @@
+---
+apiVersion: nmstate.io/v1
+kind: NodeNetworkConfigurationPolicy
+metadata:
+  name: {{ .Values.llVLANBaseInterface }}-{{ .Values.llVLANID }}
+spec:
+  desiredState:
+    interfaces:
+      - name: {{ .Values.llVLANBaseInterface }}.{{ .Values.llVLANID }}
+        controller: extranet
+        type: vlan
+        state: up
+        ipv4:
+          enabled: false
+          dhcp: false
+        ipv6:
+          enabled: true
+          dhcp: false
+        vlan:
+          base-iface: {{ .Values.llVLANBaseInterface }}
+          id: {{ .Values.llVLANID }}

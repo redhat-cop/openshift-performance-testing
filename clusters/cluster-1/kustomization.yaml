@@ -23,3 +23,10 @@ resources:
   - ../../tenants/tenant-7-backend
   - ../../tenants/tenant-8-frontend
   - ../../tenants/tenant-8-backend
+
+helmGlobals:
+  chartHome: ../../capabilities/
+helmCharts:
+  - name: nncp-ll-vlan
+    version: 1.0.0
+    valuesFile: nncp-ll-vlan-values.yaml
