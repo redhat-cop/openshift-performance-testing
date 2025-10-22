@@ -1,0 +1,13 @@
+---
+operatorGroups:
+- name: metallb-system
+  createNamespace: true
+operators:
+- channel: stable
+  installPlanApproval: Manual
+  automaticIntermediateManualUpgrades: true
+  name: metallb-operator
+  source: redhat-operators
+  sourceNamespace: openshift-marketplace
+  namespace: metallb-system
+  csv: metallb-operator.v4.19.202510142112
