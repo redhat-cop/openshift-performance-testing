@@ -16,4 +16,3 @@ spec:
           matchLabels:
             public: 'true'
   nodeSelector: {}
-  targetVRF: auto
