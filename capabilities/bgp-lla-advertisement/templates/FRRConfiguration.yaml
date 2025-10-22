@@ -15,7 +15,6 @@ spec:
         transmitInterval: {{ .Values.bgpTransmitInterval }}
     routers:
       - asn: {{ .Values.bgpASN }}
-        vrf: extranet
         neighbors:
           {{- range $bgpNeighbor := .Values.bgpNeighbors }}
           - interface: {{ $bgpNeighbor.bgpBaseInterfance }}.{{ $bgpNeighbor.bgpVLAN }}
