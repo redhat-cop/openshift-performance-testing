@@ -7,7 +7,6 @@ spec:
   desiredState:
     interfaces:
       - name: {{ .Values.llVLANBaseInterface }}.{{ .Values.llVLANID }}
-        controller: extranet
         type: vlan
         state: up
         ipv4:
