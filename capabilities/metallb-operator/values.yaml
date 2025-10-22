@@ -10,4 +10,4 @@ operators:
   source: redhat-operators
   sourceNamespace: openshift-marketplace
   namespace: metallb-system
-  csv: metallb-operator.v4.19.202510142112
+  csv: metallb-operator.v4.19.0-202510142112
