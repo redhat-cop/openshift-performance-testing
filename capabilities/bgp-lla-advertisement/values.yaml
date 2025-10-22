@@ -1,0 +1,13 @@
+---
+bgpASN:
+bgpNeighbors:
+- bgpASN:
+  bgpVLAN:
+  bgpBaseInterfance:
+- bgpASN:
+  bgpVLAN:
+  bgpBaseInterfance:
+
+bgpDetectMultiplier: 4
+bgpReceiveInterval: 200
+bgpTransmitInterval: 200

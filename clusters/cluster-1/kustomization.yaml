@@ -27,6 +27,6 @@ resources:
 helmGlobals:
   chartHome: ../../capabilities/
 helmCharts:
-  - name: nncp-ll-vlan
+  - name: bgp-lla-advertisement
     version: 1.0.0
-    valuesFile: nncp-ll-vlan-values.yaml
+    valuesFile: bgp-lla-advertisement-values.yaml

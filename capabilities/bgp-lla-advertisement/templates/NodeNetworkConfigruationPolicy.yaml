@@ -2,11 +2,12 @@
 apiVersion: nmstate.io/v1
 kind: NodeNetworkConfigurationPolicy
 metadata:
-  name: {{ .Values.llVLANBaseInterface }}-{{ .Values.llVLANID }}
+  name: bgp-lla
 spec:
   desiredState:
     interfaces:
-      - name: {{ .Values.llVLANBaseInterface }}.{{ .Values.llVLANID }}
+      {{- range $bgpNeighbor := .Values.bgpNeighbors }}
+      - name: {{ $bgpNeighbor.bgpBaseInterfance }}.{{ $bgpNeighbor.bgpVLAN }}
         type: vlan
         state: up
         ipv4:
@@ -16,5 +17,6 @@ spec:
           enabled: true
           dhcp: false
         vlan:
-          base-iface: {{ .Values.llVLANBaseInterface }}
-          id: {{ .Values.llVLANID }}
+          base-iface: {{ $bgpNeighbor.bgpBaseInterfance }}
+          id: {{ $bgpNeighbor.bgpVLAN }}
+      {{- end }}
