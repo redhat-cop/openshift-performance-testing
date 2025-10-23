@@ -3,11 +3,13 @@ bgpASN:
 bgpNeighbors:
 - bgpASN:
   bgpVLAN:
-  bgpBaseInterfance:
+  bgpBaseInterface:
 - bgpASN:
   bgpVLAN:
-  bgpBaseInterfance:
+  bgpBaseInterface:
 
 bgpDetectMultiplier: 4
 bgpReceiveInterval: 200
 bgpTransmitInterval: 200
+bgpNeighborHoldTime: 9s
+bgpNeighborKeepaliveTime: 3s
