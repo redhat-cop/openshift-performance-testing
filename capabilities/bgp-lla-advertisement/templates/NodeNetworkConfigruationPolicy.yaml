@@ -7,7 +7,7 @@ spec:
   desiredState:
     interfaces:
       {{- range $bgpNeighbor := .Values.bgpNeighbors }}
-      - name: {{ $bgpNeighbor.bgpBaseInterfance }}.{{ $bgpNeighbor.bgpVLAN }}
+      - name: {{ $bgpNeighbor.bgpBaseInterface }}.{{ $bgpNeighbor.bgpVLAN }}
         type: vlan
         state: up
         ipv4:
@@ -17,6 +17,6 @@ spec:
           enabled: true
           dhcp: false
         vlan:
-          base-iface: {{ $bgpNeighbor.bgpBaseInterfance }}
+          base-iface: {{ $bgpNeighbor.bgpBaseInterface }}
           id: {{ $bgpNeighbor.bgpVLAN }}
       {{- end }}
