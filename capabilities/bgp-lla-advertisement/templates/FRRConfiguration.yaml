@@ -20,8 +20,7 @@ spec:
           - interface: {{ $bgpNeighbor.bgpBaseInterface }}.{{ $bgpNeighbor.bgpVLAN }}
             asn: {{ $bgpNeighbor.bgpASN }}
             bfdProfile: bfd-default
-            disableMP: true
-            dualStackAddressFamily: false
+            dualStackAddressFamily: true
             holdTime: {{ $.Values.bgpNeighborHoldTime }}
             keepaliveTime: {{ $.Values.bgpNeighborKeepaliveTime }}
             enableGracefulRestart: {{ $.Values.bgpNeighborEnableGracefulRestart }}
