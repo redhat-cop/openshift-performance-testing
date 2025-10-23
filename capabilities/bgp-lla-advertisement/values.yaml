@@ -11,5 +11,6 @@ bgpNeighbors:
 bgpDetectMultiplier: 4
 bgpReceiveInterval: 200
 bgpTransmitInterval: 200
-bgpNeighborHoldTime: 9s
-bgpNeighborKeepaliveTime: 3s
+bgpNeighborHoldTime:
+bgpNeighborKeepaliveTime:
+bgpNeighborEnableGracefulRestart:

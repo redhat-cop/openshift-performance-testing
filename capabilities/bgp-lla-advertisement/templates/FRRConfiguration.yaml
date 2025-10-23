@@ -24,6 +24,7 @@ spec:
             dualStackAddressFamily: false
             holdTime: {{ $.Values.bgpNeighborHoldTime }}
             keepaliveTime: {{ $.Values.bgpNeighborKeepaliveTime }}
+            enableGracefulRestart: {{ $.Values.bgpNeighborEnableGracefulRestart }}
             toReceive:
               allowed:
                 mode: all
