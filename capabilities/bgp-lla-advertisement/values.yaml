@@ -4,9 +4,11 @@ bgpNeighbors:
 - bgpASN:
   bgpVLAN:
   bgpBaseInterface:
+  bgpSourceAddress:
 - bgpASN:
   bgpVLAN:
   bgpBaseInterface:
+  bgpSourceAddress:
 
 bgpDetectMultiplier: 4
 bgpReceiveInterval: 200

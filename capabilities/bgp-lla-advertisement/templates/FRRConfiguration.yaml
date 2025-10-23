@@ -25,6 +25,7 @@ spec:
             holdTime: {{ $.Values.bgpNeighborHoldTime }}
             keepaliveTime: {{ $.Values.bgpNeighborKeepaliveTime }}
             enableGracefulRestart: {{ $.Values.bgpNeighborEnableGracefulRestart }}
+            sourceaddress: {{ $bgpNeighbor.bgpSourceAddress }}
             toReceive:
               allowed:
                 mode: all
