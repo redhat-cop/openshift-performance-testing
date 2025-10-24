@@ -1,0 +1,7 @@
+vlan: 
+nodes:
+- hostname:
+  ipv4Address:
+  ipv4PrefixLength:
+  baseInterface:
+

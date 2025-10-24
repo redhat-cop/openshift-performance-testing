@@ -1,6 +1,6 @@
 apiVersion: v2
-name: bgp-lla-advertisement
-description: : Advertises bgp over ipv6 linklocal
+name: nncp-ipv4-vlan-interfaces
+description: Crreates NNCPs for ipv5 vlan interfaces for a list of nodes
 
 # A chart can be either an 'application' or a 'library' chart.
 #
@@ -16,3 +16,4 @@ type: application
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
 version: 1.0.0
+

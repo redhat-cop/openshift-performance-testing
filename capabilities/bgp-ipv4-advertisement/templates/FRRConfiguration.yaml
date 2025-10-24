@@ -2,7 +2,7 @@
 apiVersion: frrk8s.metallb.io/v1beta1
 kind: FRRConfiguration
 metadata:
-  name: bgp-peers-ipv6-ll-receive-all
+  name: bgp-peers-ipv4-receive-all
   namespace: openshift-frr-k8s
   labels:
     routeAdvertisements: receive-all
@@ -17,10 +17,10 @@ spec:
       - asn: {{ .Values.bgpASN }}
         neighbors:
           {{- range $bgpNeighbor := .Values.bgpNeighbors }}
-          - interface: {{ $bgpNeighbor.bgpBaseInterface }}.{{ $bgpNeighbor.bgpVLAN }}
+          - address: {{ $bgpNeighbor.bgpAddress }}
             asn: {{ $bgpNeighbor.bgpASN }}
             bfdProfile: bfd-default
-            dualStackAddressFamily: true
+            dualStackAddressFamily: false
             holdTime: {{ $.Values.bgpNeighborHoldTime }}
             keepaliveTime: {{ $.Values.bgpNeighborKeepaliveTime }}
             enableGracefulRestart: {{ $.Values.bgpNeighborEnableGracefulRestart }}

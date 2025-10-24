@@ -1,0 +1,18 @@
+---
+apiVersion: k8s.ovn.org/v1
+kind: RouteAdvertisements
+metadata:
+  name: bgp-receive-all-public
+spec:
+  advertisements:
+    - PodNetwork
+  frrConfigurationSelector:
+    matchLabels:
+      routeAdvertisements: receive-all
+  networkSelectors:
+    - networkSelectionType: ClusterUserDefinedNetworks
+      clusterUserDefinedNetworkSelector:
+        networkSelector:
+          matchLabels:
+            public: 'true'
+  nodeSelector: {}

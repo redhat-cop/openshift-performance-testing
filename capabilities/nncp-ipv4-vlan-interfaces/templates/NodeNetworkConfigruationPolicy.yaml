@@ -1,0 +1,27 @@
+{{- range $node := .Values.nodes }}
+---
+apiVersion: nmstate.io/v1
+kind: NodeNetworkConfigurationPolicy
+metadata:
+  name: {{ $node.baseInterface }}.{{ $.Values.vlan }}-{{ $node.hostname }}
+spec:
+  nodeSelector:
+    kubernetes.io/hostname: {{ $node.hostname }}
+  desiredState:
+    interfaces:
+      - name: {{ $node.baseInterface }}.{{ $.Values.vlan }}
+        type: vlan
+        state: up
+        ipv4:
+          enabled: true
+          dhcp: false
+          address:
+            - ip: {{ $node.ipv4Address }}
+              prefix-length: {{ $node.ipv4PrefixLength }}
+        ipv6:
+          enabled: false
+          dhcp: false
+        vlan:
+          base-iface: {{ $node.baseInterface }}
+          id: {{ $.Values.vlan }}
+{{- end }}
