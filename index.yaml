@@ -1,0 +1,33 @@
+apiVersion: v1
+entries:
+  bgp-ipv4-advertisement:
+  - apiVersion: v2
+    created: "2025-10-27T15:24:37.397367817Z"
+    description: Advertises bgp over ipv4
+    digest: c552ead939314e5ec7fcf51862edbb2a7c0c81242cdbb5760a93585574d5325c
+    name: bgp-ipv4-advertisement
+    type: application
+    urls:
+    - https://github.com/itewk/ocp-network-testing/releases/download/bgp-ipv4-advertisement-1.0.0/bgp-ipv4-advertisement-1.0.0.tgz
+    version: 1.0.0
+  bgp-lla-advertisement:
+  - apiVersion: v2
+    created: "2025-10-27T15:24:37.584436289Z"
+    description: Advertises bgp over ipv6 linklocal
+    digest: 1b8be944c3259549384e761af277fa60041852fcaeed1f469645f70db38039c1
+    name: bgp-lla-advertisement
+    type: application
+    urls:
+    - https://github.com/itewk/ocp-network-testing/releases/download/bgp-lla-advertisement-1.0.0/bgp-lla-advertisement-1.0.0.tgz
+    version: 1.0.0
+  nncp-ipv4-vlan-interfaces:
+  - apiVersion: v2
+    created: "2025-10-27T15:24:37.779216678Z"
+    description: Crreates NNCPs for ipv5 vlan interfaces for a list of nodes
+    digest: bb432009ea77db4aac6b8d571f4973876de889c4a518e1cce4950eb49a8b6a3e
+    name: nncp-ipv4-vlan-interfaces
+    type: application
+    urls:
+    - https://github.com/itewk/ocp-network-testing/releases/download/nncp-ipv4-vlan-interfaces-1.0.0/nncp-ipv4-vlan-interfaces-1.0.0.tgz
+    version: 1.0.0
+generated: "2025-10-27T15:24:37.779237608Z"
