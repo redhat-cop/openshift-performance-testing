@@ -11,5 +11,5 @@ operators:
     name: kubernetes-nmstate-operator
     source: redhat-operators
     sourceNamespace: openshift-marketplace
-    csv: kubernetes-nmstate-operator.4.19.0-202510081435
+    csv: kubernetes-nmstate-operator.4.19.0-202510142112
     namespace: openshift-nmstate
