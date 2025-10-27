@@ -12,3 +12,4 @@ spec:
       routeAdvertisements: Enabled
       gatewayConfig:
         routingViaHost: true
+        ipForwarding: Global
