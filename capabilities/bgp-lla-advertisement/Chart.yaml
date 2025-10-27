@@ -1,6 +1,6 @@
 apiVersion: v2
 name: bgp-lla-advertisement
-description: : Advertises bgp over ipv6 linklocal
+description: Advertises bgp over ipv6 linklocal
 
 # A chart can be either an 'application' or a 'library' chart.
 #
