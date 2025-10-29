@@ -14,7 +14,7 @@ spec:
         state: up
         type: vrf
         vrf:
-          route-table-id: $.Values.vrfRouteTableId
+          route-table-id: {{ $.Values.vrfRouteTableId }}
       {{- end }}
       - name: {{ $node.baseInterface }}.{{ $.Values.vlan }}
         type: vlan
