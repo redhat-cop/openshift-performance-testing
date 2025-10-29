@@ -31,6 +31,15 @@ entries:
     version: 1.0.0
   nncp-ipv4-vlan-interfaces:
   - apiVersion: v2
+    created: "2025-10-29T16:53:49.590782366Z"
+    description: Crreates NNCPs for ipv5 vlan interfaces for a list of nodes
+    digest: 0012578a01e68f2bcdc0f12a29f8de591e1bf9df8bdca55ffaf9f9f22b3f18e6
+    name: nncp-ipv4-vlan-interfaces
+    type: application
+    urls:
+    - https://github.com/itewk/ocp-network-testing/releases/download/nncp-ipv4-vlan-interfaces-1.2.0/nncp-ipv4-vlan-interfaces-1.2.0.tgz
+    version: 1.2.0
+  - apiVersion: v2
     created: "2025-10-29T16:47:49.61729925Z"
     description: Crreates NNCPs for ipv5 vlan interfaces for a list of nodes
     digest: 80cc1875f43aab2091f1e5be8eeff095e054b19b0f46f2358b1df4f0f950bf35
@@ -48,4 +57,4 @@ entries:
     urls:
     - https://github.com/itewk/ocp-network-testing/releases/download/nncp-ipv4-vlan-interfaces-1.0.0/nncp-ipv4-vlan-interfaces-1.0.0.tgz
     version: 1.0.0
-generated: "2025-10-29T16:47:49.617314869Z"
+generated: "2025-10-29T16:53:49.590796282Z"
