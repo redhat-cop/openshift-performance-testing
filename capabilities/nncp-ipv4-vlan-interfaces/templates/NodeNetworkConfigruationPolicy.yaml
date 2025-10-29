@@ -9,15 +9,19 @@ spec:
     kubernetes.io/hostname: {{ $node.hostname }}
   desiredState:
     interfaces:
-      - name: {{ $node.baseInterface }}.{{ $.Values.vlan }}-vrf
+      {{- if $.Values.vrfName }}
+      - name: {{ $.Values.vrfName }}
         state: up
         type: vrf
         vrf:
           route-table-id: $.Values.vrfRouteTableId
+      {{- end }}
       - name: {{ $node.baseInterface }}.{{ $.Values.vlan }}
         type: vlan
         state: up
-        controller: {{ $node.baseInterface }}.{{ $.Values.vlan }}-vrf
+        {{- if $.Values.vrfName }}
+        controller: {{ $.Values.vrfName }}
+        {{- end }}
         ipv4:
           enabled: true
           dhcp: false

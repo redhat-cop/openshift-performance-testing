@@ -1,4 +1,5 @@
 vlan: 
+vrfName: 
 vrfRouteTableId: 42
 nodes:
 - hostname:
