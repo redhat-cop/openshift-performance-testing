@@ -15,6 +15,9 @@ spec:
         transmitInterval: {{ .Values.bgpTransmitInterval }}
     routers:
       - asn: {{ .Values.bgpASN }}
+        {{- if .Values.bgpVRF }}
+        vrf: {{ .Values.bgpVRF }}
+        {{- end }}
         neighbors:
           {{- range $bgpNeighbor := .Values.bgpNeighbors }}
           - address: {{ $bgpNeighbor.bgpAddress }}

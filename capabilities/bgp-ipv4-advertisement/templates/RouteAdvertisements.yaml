@@ -15,4 +15,7 @@ spec:
         networkSelector:
           matchLabels:
             public: 'true'
+  {{- if .Values.bgpVRF }}
+  targetVRF: {{ .Values.bgpVRF }}
+  {{- end }}
   nodeSelector: {}

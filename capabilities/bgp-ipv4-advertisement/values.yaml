@@ -1,5 +1,6 @@
 ---
 bgpASN:
+bgpVRF: 
 bgpNeighbors:
 - bgpASN:
   bgpAddress:
