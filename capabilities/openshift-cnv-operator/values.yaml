@@ -1,0 +1,15 @@
+---
+operatorGroups:
+  - name: openshift-cnv
+    createNamespace: true
+    targetOwnNamespace: true
+
+operators:
+  - channel: stable
+    installPlanApproval: Manual
+    automaticIntermediateManualUpgrades: true
+    name: ubevirt-hyperconverged
+    source: redhat-operators
+    sourceNamespace: openshift-marketplace
+    csv: kubevirt-hyperconverged-operator.v4.19.6
+    namespace: openshift-cnv
