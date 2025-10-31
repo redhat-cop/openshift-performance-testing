@@ -8,7 +8,7 @@ operators:
   - channel: stable
     installPlanApproval: Manual
     automaticIntermediateManualUpgrades: true
-    name: ubevirt-hyperconverged
+    name: kubevirt-hyperconverged
     source: redhat-operators
     sourceNamespace: openshift-marketplace
     csv: kubevirt-hyperconverged-operator.v4.19.6
