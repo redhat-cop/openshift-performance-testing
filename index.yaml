@@ -2,6 +2,15 @@ apiVersion: v1
 entries:
   bgp-ipv4-advertisement:
   - apiVersion: v2
+    created: "2025-10-31T14:38:25.569189965Z"
+    description: Advertises bgp over ipv4
+    digest: 5b79a47d798cb48b23c8acbd4804c944c5cd2a587af650731336dce1784863ae
+    name: bgp-ipv4-advertisement
+    type: application
+    urls:
+    - https://github.com/redhat-cop/openshift-performance-testing/releases/download/bgp-ipv4-advertisement-1.1.1/bgp-ipv4-advertisement-1.1.1.tgz
+    version: 1.1.1
+  - apiVersion: v2
     created: "2025-10-31T14:33:13.105237024Z"
     description: Advertises bgp over ipv4
     digest: 9d14b146ca2c088116c3e976611b4c375def37b75aa6d4e0c508aad5c77d1a95
@@ -11,6 +20,15 @@ entries:
     - https://github.com/redhat-cop/openshift-performance-testing/releases/download/bgp-ipv4-advertisement-1.1.0/bgp-ipv4-advertisement-1.1.0.tgz
     version: 1.1.0
   bgp-lla-advertisement:
+  - apiVersion: v2
+    created: "2025-10-31T14:38:25.70616575Z"
+    description: Advertises bgp over ipv6 linklocal
+    digest: 3c8235b9fd866ac499f203be8b6700aa138305d551bc97cd8f527a3515e3e564
+    name: bgp-lla-advertisement
+    type: application
+    urls:
+    - https://github.com/redhat-cop/openshift-performance-testing/releases/download/bgp-lla-advertisement-1.0.1/bgp-lla-advertisement-1.0.1.tgz
+    version: 1.0.1
   - apiVersion: v2
     created: "2025-10-31T14:33:13.363834488Z"
     description: Advertises bgp over ipv6 linklocal
@@ -22,6 +40,15 @@ entries:
     version: 1.0.0
   nncp-ipv4-vlan-interfaces:
   - apiVersion: v2
+    created: "2025-10-31T14:38:25.853396438Z"
+    description: Crreates NNCPs for ipv5 vlan interfaces for a list of nodes
+    digest: 0100302870aabdcf66d43174275c86da31a72768b96af1185116da300bac4bcf
+    name: nncp-ipv4-vlan-interfaces
+    type: application
+    urls:
+    - https://github.com/redhat-cop/openshift-performance-testing/releases/download/nncp-ipv4-vlan-interfaces-1.2.2/nncp-ipv4-vlan-interfaces-1.2.2.tgz
+    version: 1.2.2
+  - apiVersion: v2
     created: "2025-10-31T14:33:13.616658869Z"
     description: Crreates NNCPs for ipv5 vlan interfaces for a list of nodes
     digest: 33e842db63cb4ebb2df7239d1793606ea0f40621e4482e55c3583c58b4326e78
@@ -30,4 +57,4 @@ entries:
     urls:
     - https://github.com/redhat-cop/openshift-performance-testing/releases/download/nncp-ipv4-vlan-interfaces-1.2.1/nncp-ipv4-vlan-interfaces-1.2.1.tgz
     version: 1.2.1
-generated: "2025-10-31T14:33:13.616665702Z"
+generated: "2025-10-31T14:38:25.85341368Z"
