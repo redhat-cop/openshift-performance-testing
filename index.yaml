@@ -48,6 +48,16 @@ entries:
     urls:
     - https://github.com/redhat-cop/openshift-performance-testing/releases/download/network-testing-tools-1.0.0/network-testing-tools-1.0.0.tgz
     version: 1.0.0
+  network-tools:
+  - apiVersion: v2
+    created: "2025-10-31T20:57:19.821631649Z"
+    description: Deploys Containers and VMs for doing network testing
+    digest: d40cbc88c5515e257701660b67ca3c7b66efb924067a2496ed1fb7bc710efc34
+    name: network-tools
+    type: application
+    urls:
+    - https://github.com/redhat-cop/openshift-performance-testing/releases/download/network-tools-1.0.0/network-tools-1.0.0.tgz
+    version: 1.0.0
   nncp-ipv4-vlan-interfaces:
   - apiVersion: v2
     created: "2025-10-31T14:38:25.853396438Z"
@@ -67,4 +77,4 @@ entries:
     urls:
     - https://github.com/redhat-cop/openshift-performance-testing/releases/download/nncp-ipv4-vlan-interfaces-1.2.1/nncp-ipv4-vlan-interfaces-1.2.1.tgz
     version: 1.2.1
-generated: "2025-10-31T20:25:44.969041525Z"
+generated: "2025-10-31T20:57:19.821645986Z"
