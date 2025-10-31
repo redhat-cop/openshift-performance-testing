@@ -1,0 +1,15 @@
+---
+vmsReplicas: 2
+vmsEnableDefaultNetwork: true
+vmsContainerDiskImage: registry.redhat.io/rhel9/rhel-guest-image
+vmsCPUs: 1
+vmsSockets: 1
+vmsThreads: 1
+vmsMemory: 1Gi
+vmsSSHPublicKey: 
+
+containersReplicas: 2
+containersImage: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:22db92ca6dc423f90248a6f6964ff217b833534e68e0ee1d35052a01073f3ff2
+
+additionalNetworks: []
+

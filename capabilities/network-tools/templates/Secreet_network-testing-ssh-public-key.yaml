@@ -1,0 +1,8 @@
+---
+kind: Secret
+apiVersion: v1
+metadata:
+  name: network-testing-ssh-public-key
+stringData:
+  key: {{ $.Values.vmsSSHPublicKey }}
+type: Opaque

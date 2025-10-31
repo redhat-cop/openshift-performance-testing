@@ -1,0 +1,87 @@
+apiVersion: pool.kubevirt.io/v1alpha1
+kind: VirtualMachinePool
+metadata:
+  name: rhel9-network-test
+spec:
+  replicas: {{ $.Values.vmsReplicas }}
+  selector:
+    matchLabels:
+      app: rhel9-network-test
+  virtualMachineTemplate:
+    metadata:
+      labels:
+        app: rhel9-network-test
+    spec:
+      runStrategy: RerunOnFailure
+      template:
+        spec:
+          accessCredentials:
+            - sshPublicKey:
+                propagationMethod:
+                  noCloud: {}
+                source:
+                  secret:
+                    secretName: network-testing-ssh-public-key
+          architecture: amd64
+          domain:
+            cpu:
+              cores: {{ $.Values.vmsCPUs }}
+              sockets: {{ $.Values.vmsSockets }}
+              threads: {{ $.Values.vmsThreads }}
+            memory:
+              guest: {{ $.Values.vmsMemory }}
+            devices:
+              disks:
+                - name: rootdisk
+                  disk: {}
+                - disk:
+                    bus: virtio
+                  name: cloudinitdisk
+              interfaces:
+                {{- if $.Values.vmsEnableDefaultNetwork }}
+                - binding:
+                    name: l2bridge
+                  model: virtio
+                  name: default
+                {{- end }}
+                {{- if $.Values.additionalNetworks }}
+                {{- range $additionalNetwork := $.Values.additionalNetworks }}
+                - bridge: {}
+                  model: virtio
+                  name: {{ $additionalNetwork }}
+                  state: up
+                {{- end }}
+                {{- end }}
+              rng: {}
+            features:
+              acpi: {}
+              smm:
+                enabled: true
+            firmware:
+              bootloader:
+                efi: {}
+            machine:
+              type: pc-q35-rhel9.6.0
+            resources: {}
+          networks:
+            {{- if $.Values.vmsEnableDefaultNetwork }}
+            - name: default
+              pod: {}
+            {{- end }}
+            {{- if $.Values.additionalNetworks }}
+            {{- range $additionalNetwork := $.Values.additionalNetworks }}
+            - name: {{ $additionalNetwork }}
+              multus:
+                networkName: {{ $additionalNetwork }}
+            {{- end }}
+            {{- end }}
+          terminationGracePeriodSeconds: 180
+          volumes:
+            - name: rootdisk 
+              containerDisk:
+                image: {{ $.Values.vmsContainerDiskImage }}
+            - cloudInitNoCloud:
+                userData: |
+                  #cloud-config
+                  runcmd: []
+              name: cloudinitdisk

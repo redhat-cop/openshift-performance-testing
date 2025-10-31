@@ -4,7 +4,7 @@ apiVersion: apps/v1
 metadata:
   name: network-tools
 spec:
-  replicas: 2
+  replicas: {{ $.Values.containersReplicas }}
   selector:
     matchLabels:
       app: network-tools
@@ -13,10 +13,14 @@ spec:
       labels:
         app: network-tools
         deployment: network-tools
+      annotations:
+        {{- if $.Values.additionalNetworks }}
+        k8s.v1.cni.cncf.io/networks: {{ $.Values.additionalNetworks | join "," }}
+        {{- end }}
     spec:
       containers:
         - name: network-tools
-          image: 'quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:22db92ca6dc423f90248a6f6964ff217b833534e68e0ee1d35052a01073f3ff2'
+          image:  {{ $.Values.containersImage }}
           imagePullPolicy: IfNotPresent
           stdin: true
           stdinOnce: true
