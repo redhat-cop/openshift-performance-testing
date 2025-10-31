@@ -38,6 +38,16 @@ entries:
     urls:
     - https://github.com/redhat-cop/openshift-performance-testing/releases/download/bgp-lla-advertisement-1.0.0/bgp-lla-advertisement-1.0.0.tgz
     version: 1.0.0
+  network-testing-tools:
+  - apiVersion: v2
+    created: "2025-10-31T20:25:44.969026457Z"
+    description: Deploys Containers and VMs for doing network testing
+    digest: cb6b35fdc53bc0fe104d0ad40a8926aecdf28a870dd0c5d3ad5f26e396ed5362
+    name: network-testing-tools
+    type: application
+    urls:
+    - https://github.com/redhat-cop/openshift-performance-testing/releases/download/network-testing-tools-1.0.0/network-testing-tools-1.0.0.tgz
+    version: 1.0.0
   nncp-ipv4-vlan-interfaces:
   - apiVersion: v2
     created: "2025-10-31T14:38:25.853396438Z"
@@ -57,4 +67,4 @@ entries:
     urls:
     - https://github.com/redhat-cop/openshift-performance-testing/releases/download/nncp-ipv4-vlan-interfaces-1.2.1/nncp-ipv4-vlan-interfaces-1.2.1.tgz
     version: 1.2.1
-generated: "2025-10-31T14:38:25.85341368Z"
+generated: "2025-10-31T20:25:44.969041525Z"
