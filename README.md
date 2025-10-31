@@ -1,2 +1,2 @@
 # OpenShift Performance Testing
-Generic cluster configuration for setting up clusters to be ready for performance testing and scripts for doing said testing.
+Automation and cluster configuration for performing compute, networking, and storage performance testing of OpenShift 4 clusters.
