@@ -1,2 +1,2 @@
-# OCP Network Testing (gh-pages)
+# OpenShift Performance Testing (gh-pages)
 Used to publish helm charts.
