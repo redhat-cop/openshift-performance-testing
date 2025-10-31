@@ -1,5 +1,0 @@
----
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: tenant-1-default-pod-network
