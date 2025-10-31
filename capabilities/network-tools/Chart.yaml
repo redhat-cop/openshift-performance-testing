@@ -1,5 +1,5 @@
 apiVersion: v2
-name: network-testing-tools
+name: network-tools
 description: Deploys Containers and VMs for doing network testing
 
 # A chart can be either an 'application' or a 'library' chart.
